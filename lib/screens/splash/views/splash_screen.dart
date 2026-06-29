@@ -12,7 +12,7 @@ class SplashScreen extends StatelessWidget {
     return BlocListener<SplashBloc, SplashState>(
       listener: (context, state) {
         if (state is SplashNavigationReady) {
-          context.go(AppRoutes.home);
+          context.go(AppRoutes.homeTab);
         }
       },
 
