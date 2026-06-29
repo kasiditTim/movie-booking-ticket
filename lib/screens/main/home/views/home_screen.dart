@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:movie_booking_ticket/core/theme/app_colors.dart';
 import 'package:movie_booking_ticket/core/theme/app_spacing.dart';
+import 'package:movie_booking_ticket/core/theme/app_text_styles.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +18,16 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [Text("Hi, Angelina 👋"), Text("Welcome back")],
+                    children: [
+                      Text(
+                        "Hi, Angelina 👋",
+                        style: context.textTheme.bodyLarge,
+                      ),
+                      Text(
+                        "Welcome back",
+                        style: context.textTheme.headlineSmall,
+                      ),
+                    ],
                   ),
                   Icon(Icons.notification_add),
                 ],
@@ -29,75 +40,16 @@ class HomeScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Now playing"),
-                  InkWell(child: Text("see all >")),
+                  Text("Now playing", style: context.textTheme.headlineSmall),
+                  InkWell(
+                    child: Text(
+                      "See all >",
+                      style: context.textTheme.bodyMedium?.copyWith(
+                        color: AppColors.primary,
+                      ),
+                    ),
+                  ),
                 ],
-              ),
-              Container(
-                height: 200,
-                width: 500,
-                color: Colors.red,
-                child: Text("AAAAAAA"),
-              ),
-
-              //
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Coming soon"),
-                  InkWell(child: Text("see all >")),
-                ],
-              ),
-              Container(
-                height: 200,
-                width: 500,
-                color: Colors.red,
-                child: Text("AAAAAAA"),
-              ),
-
-              //
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Promo & Discount"),
-                  InkWell(child: Text("see all >")),
-                ],
-              ),
-              Container(
-                height: 200,
-                width: 500,
-                color: Colors.red,
-                child: Text("AAAAAAA"),
-              ),
-
-              //
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Service"),
-                  InkWell(child: Text("see all >")),
-                ],
-              ),
-              Container(
-                height: 200,
-                width: 500,
-                color: Colors.red,
-                child: Text("AAAAAAA"),
-              ),
-
-              //
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Movie news"),
-                  InkWell(child: Text("see all >")),
-                ],
-              ),
-              Container(
-                height: 200,
-                width: 500,
-                color: Colors.red,
-                child: Text("AAAAAAA"),
               ),
             ],
           ),
